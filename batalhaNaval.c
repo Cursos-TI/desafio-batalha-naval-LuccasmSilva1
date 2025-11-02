@@ -30,10 +30,24 @@ int main() {
         printf("Fora dos limites!\n");
         return 1;
     }
-
-    
-
-
+    //posicionamento
+    for(j = coluna_h; j < coluna_h + tam_navio; j++ ){
+        mapa[linha_h][j]=navio;
+    }
+    for(i = linha_v; i< linha_v + tam_navio ; i++){
+        mapa[i][coluna_v]=navio;
+    }
+    //jogo
+    printf("\nMapa\n");
+    for(i = 0; i < 10 ; i++ ){
+        for(j = 0; j < 10 ; j++){
+            if(mapa[i][j] == agua)
+                printf("1 ");
+            else if (mapa[i][j]==navio)
+                printf("3 ");        
+        }
+    printf("\n");    
+    }
 
     return 0;
 }
